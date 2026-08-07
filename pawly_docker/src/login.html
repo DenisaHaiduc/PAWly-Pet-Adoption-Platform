@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAWly - Autentificare</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="login.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Autentificare PAWly</h1>
+        <img src="PAWLY.png" alt="Logo" id="logo-site">
+    </header>
+
+    <div class="layout-principal">
+        <nav class="meniu-vertical">
+            <ul>
+                <li><a href="index.html">Acasă</a></li>
+                <li><a href="announcement.html">Adaugă Anunț</a></li>
+                <li><a href="login.html">Autentificare</a></li>
+            </ul>
+        </nav>
+
+        <main class="continut">
+            <div class="login-wrapper">
+
+                <div class="form-panel">
+                    <h2>Intră în contul tău</h2>
+                    <form id="form-autentificare" action="#" method="post">
+                        <div class="grup-form">
+                            <label for="username">Nume Utilizator (doar litere mici și cifre)</label>
+                            <div class="input-validare">
+                                <input type="text" id="username" name="username" placeholder="ex: denisa2026" required>
+                                <span class="bulina-status" id="status-username"></span>
+                            </div>
+                        </div>
+
+                        <div class="grup-form">
+                            <label for="cod_acces">Cod de Acces (doar litere mici și cifre)</label>
+                            <div class="input-validare">
+                                <input type="text" id="cod_acces" name="cod_acces" placeholder="ex: pawly123" required>
+                                <span class="bulina-status" id="status-cod"></span>
+                            </div>
+                        </div>
+
+                        <div class="grup-form">
+                            <label for="parola">Parolă (obligatoriu: litere mari, mici, cifre și !)</label>
+                            <div class="input-validare">
+                                <input type="password" id="parola" name="parola" placeholder="ex: ParolaMea!123"
+                                    required>
+                                <span class="bulina-status"></span>
+                            </div>
+                        </div>
+
+                        <div class="grup-form">
+                            <label for="email">Adresă Email</label>
+                            <div class="input-validare">
+                                <input type="email" id="email" name="email" placeholder="exemplu_123@mail.com" required>
+                                <span class="bulina-status"></span>
+                            </div>
+                        </div>
+
+                        <div class="grup-form">
+                            <label for="telefon">Număr de Telefon</label>
+                            <div class="input-validare">
+                                <input type="tel" id="telefon" name="telefon" placeholder="(+40) 777 777 777" required>
+                                <span class="bulina-status"></span>
+                            </div>
+                        </div>
+
+                        <div class="grup-form">
+                            <label for="data_nastere">Data nașterii (Format: zz/ll/aaaa)</label>
+                            <div class="input-validare">
+                                <input type="text" id="data_nastere" name="data_nastere" placeholder="31/01/2006"
+                                    required>
+                                <span class="bulina-status"></span>
+                            </div>
+                        </div>
+
+                        <div class="grup-form">
+                            <label for="rol">Te autentifici ca</label>
+                            <select id="rol" name="rol">
+                                <option value="proprietar">🐾 Proprietar de animal</option>
+                                <option value="adoptator">🏠 Căutător (Adopție)</option>
+                            </select>
+                        </div>
+
+                        <div class="butoane-form">
+                            <button type="submit">Autentificare</button>
+                            <button type="reset" class="buton-secundar">Anulează</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="widgets-panel">
+                    <div class="widget">
+                        <p class="widget-title">📊 Statistici Platformă</p>
+                        <div class="stats-row">
+                            <div class="stat-card">
+                                <div class="stat-number">1.240</div>
+                                <div class="stat-label">Anunțuri active</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-number">387</div>
+                                <div class="stat-label">Adopții reușite</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-number">56</div>
+                                <div class="stat-label">Medici parteneri</div>
+                            </div>
+                        </div>
+                        <div class="progress-bar-wrap">
+                            <div class="progress-label">
+                                <span>🎯 Obiectiv lunar adopții</span>
+                                <span>387 / 500</span>
+                            </div>
+                            <div class="progress-track">
+                                <div class="progress-fill"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="widget">
+                        <p class="widget-title">👤 Ce poți face pe PAWly</p>
+                        <div class="role-cards">
+                            <div class="role-card">
+                                <span class="role-emoji">🐾</span>
+                                <div class="role-info">
+                                    <strong>Proprietar</strong>
+                                    <span>Publică anunțuri, gestionează animalele tale</span>
+                                </div>
+                            </div>
+                            <div class="role-card">
+                                <span class="role-emoji">🏠</span>
+                                <div class="role-info">
+                                    <strong>Adoptator</strong>
+                                    <span>Caută animale, contactează proprietari</span>
+                                </div>
+                            </div>
+                            <div class="role-card">
+                                <span class="role-emoji">🩺</span>
+                                <div class="role-info">
+                                    <strong>Medic Veterinar</strong>
+                                    <span>Verifică sănătatea, oferă consultații</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 PAWly - Design Minimalist</p>
+    </footer>
+
+    <script>
+        //buline
+        function seteazaBulina(inputElement, esteValid) {
+            const bulina = inputElement.nextElementSibling;
+
+            if (inputElement.value === "") {
+                bulina.textContent = "";
+            } else {
+                bulina.textContent = esteValid ? "🟢" : "🔴";
+            }
+        }
+
+        //validare data
+        function valideaza(dataStr, formatStr) {
+            const partiData = dataStr.split('/');
+            const partiFormat = formatStr.split('/');
+
+            if (partiData.length !== 3 || partiFormat.length !== 3) return false;
+
+            let zi = 0, luna = 0, an = 0;
+            const anCurent = 2026; // Suntem în anul 2026
+            const anScurtCurent = 26;
+
+            for (let i = 0; i < 3; i++) {
+                let valoareStr = partiData[i];
+                let valoareNum = parseInt(valoareStr, 10);
+                let format = partiFormat[i];
+
+                if (isNaN(valoareNum)) return false;
+
+                if (format === 'zz') {
+
+                    if (valoareStr.length !== 2) return false;
+                    zi = valoareNum;
+                }
+                else if (format === 'll') {
+                    if (valoareStr.length !== 2) return false;
+                    luna = valoareNum;
+                }
+                else if (format === 'aaaa') {
+
+                    if (valoareStr.length !== 4) return false;
+                    an = valoareNum;
+                }
+
+            }
+
+            // 1. Validări de bază
+            if (luna < 1 || luna > 12) return false;
+            if (zi < 1 || zi > 31) return false;
+
+            // 2. Prevenim datele din viitor 
+            if (an > anCurent) return false;
+
+            // 3. Verificarea zilelor în funcție de lună și an bisect
+            const zilePeLuni = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+            const eBisect = (an % 4 === 0 && (an % 100 !== 0 || an % 400 === 0));
+            if (eBisect) zilePeLuni[1] = 29;
+
+            if (zi > zilePeLuni[luna - 1]) return false;
+
+            return true;
+        }
+
+
+        // 3. atasam REGULILE PENTRU FIECAREcamop  in TIMP REAL
+
+
+        // Regula comuna pentru Nume Utilizator și Cod de Acces
+        const regexLitereCifre = /^[a-z0-9]+$/;
+
+        document.getElementById('username').addEventListener('input', function (event) {
+            seteazaBulina(event.target, regexLitereCifre.test(event.target.value));
+        });
+
+        document.getElementById('cod_acces').addEventListener('input', function (event) {
+            seteazaBulina(event.target, regexLitereCifre.test(event.target.value));
+        });
+
+        document.getElementById('parola').addEventListener('input', function (event) {
+            const val = event.target.value;
+            const valid = /[a-z]/.test(val) && /[A-Z]/.test(val) && /[0-9]/.test(val) && /!/.test(val);
+            seteazaBulina(event.target, valid);
+        });
+
+        document.getElementById('email').addEventListener('input', function (event) {
+            const val = event.target.value;
+            const valid = /^[a-zA-Z0-9_@.]+$/.test(val) && val.split('@').length === 2 && val.includes('.');
+            seteazaBulina(event.target, valid);
+        });
+
+        document.getElementById('telefon').addEventListener('input', function (event) {
+            const valid = /^\(\+40\) [0-9]{3} [0-9]{3} [0-9]{3}$/.test(event.target.value);
+            seteazaBulina(event.target, valid);
+        });
+
+        document.getElementById('data_nastere').addEventListener('input', function (event) {
+            const val = event.target.value;
+            let valid = false;
+            if (val.split('/').length === 3) {
+                valid = valideaza(val, 'zz/ll/aaaa');
+            }
+            seteazaBulina(event.target, valid);
+        });
+
+        //validare finala la clikc
+        const formular = document.getElementById('form-autentificare');
+
+        formular.addEventListener('submit', function (event) {
+            event.preventDefault(); // Oprim trimiterea automată
+
+            let esteValid = true;
+            let mesajeEroare = [];
+
+            if (!regexLitereCifre.test(document.getElementById('username').value)) {
+                esteValid = false;
+                mesajeEroare.push("• Numele de utilizator trebuie să conțină doar litere mici și cifre.");
+            }
+
+            if (!regexLitereCifre.test(document.getElementById('cod_acces').value)) {
+                esteValid = false;
+                mesajeEroare.push("• Codul de acces trebuie să conțină doar litere mici și cifre.");
+            }
+
+            const valParola = document.getElementById('parola').value;
+            if (!(/[a-z]/.test(valParola) && /[A-Z]/.test(valParola) && /[0-9]/.test(valParola) && /!/.test(valParola))) {
+                esteValid = false;
+                mesajeEroare.push("• Parola trebuie să conțină litere mari, mici, cifre și caracterul '!'.");
+            }
+
+            const valEmail = document.getElementById('email').value;
+            if (!(/^[a-zA-Z0-9_@.]+$/.test(valEmail) && valEmail.split('@').length === 2 && valEmail.includes('.'))) {
+                esteValid = false;
+                mesajeEroare.push("• Email-ul este invalid (verifică formatul și simbolurile @ și .).");
+            }
+
+            if (!/^\(\+40\) [0-9]{3} [0-9]{3} [0-9]{3}$/.test(document.getElementById('telefon').value)) {
+                esteValid = false;
+                mesajeEroare.push("• Telefonul trebuie să fie în formatul (+40) 777 777 777.");
+            }
+
+            if (!valideaza(document.getElementById('data_nastere').value, 'zz/ll/aaaa')) {
+                esteValid = false;
+                mesajeEroare.push("• Data nașterii este incorectă sau nu respectă formatul zz/ll/aaaa.");
+            }
+
+            if (esteValid) {
+                alert("✅ Toate datele sunt corecte! Autentificarea a reușit.");
+                // formular.submit(); 
+            } else {
+                alert("❌ Te rugăm să corectezi următoarele erori:\n\n" + mesajeEroare.join("\n"));
+            }
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+services:
+  # Serviciul de Bază de Date (MySQL) - Necesar pentru CRUD [cite: 3]
+  db:
+    image: mysql:8.0
+    container_name: pawly_db
+    restart: always
+    environment:
+      MYSQL_DATABASE: pawly_app
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - pawly_db_data:/var/lib/mysql
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - "3306:3306"
+
+  # Serviciul PHP & Web Server - Necesar pentru procesarea codului [cite: 1]
+  php:
+    image: php:8.2-apache
+    container_name: pawly_php
+    volumes:
+      - ./src:/var/www/html
+    ports:
+      - "8080:80"
+    depends_on:
+      - db
+    command: >
+      sh -c "docker-php-ext-install mysqli pdo pdo_mysql &&
+             echo 'upload_max_filesize = 20M' > /usr/local/etc/php/conf.d/uploads.ini &&
+             echo 'post_max_size = 25M' >> /usr/local/etc/php/conf.d/uploads.ini &&
+             apache2-foreground"
+
+  phpmyadmin:
+    image: phpmyadmin:latest
+    container_name: pawly_pma
+    environment:
+      PMA_HOST: db
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "8081:80"
+
+volumes:
+  pawly_db_data:
