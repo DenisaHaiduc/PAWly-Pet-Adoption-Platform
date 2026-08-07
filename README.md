@@ -8,9 +8,8 @@ PAWly este o aplicație web full-stack dedicată gestionării și publicării an
 
 | Pagina Principală & Căutare Live | Formular Adăugare Anunț |
 | :---: | :---: |
-| ![Home Page](src/dog_1.jpg) | ![Add Form](src/cat_1.jpg) |
+| ![Home Page](src/uploads/ok1.png) | ![Add Form](src/uploads/ok3.png) | ![Find your soulmate pet](src/uploads/ok2.png) |
 
-*(Notă: Înlocuiește `src/dog_1.jpg` și `src/cat_1.jpg` cu căile către capturile tale de ecran din folderul de proiect)*
 
 ---
 
