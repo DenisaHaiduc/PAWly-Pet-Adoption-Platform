@@ -6,9 +6,9 @@ PAWly este o aplicație web full-stack dedicată gestionării și publicării an
 
 ## 📸 Capturi de Ecran (Screenshots)
 
-| Pagina Principală & Căutare Live | Formular Adăugare Anunț |
+| Pagina Principală & Căutare Live | Formular Adăugare Anunț | Find your soulmate pet |
 | :---: | :---: |
-| ![Home Page](pawly_docker/src/dog_1.jpg) | ![Add Form](pawly_docker\src\uploads\ok3.png) | ![Find your soulmate pet](src/uploads/ok2.png) |
+| ![Home Page](pawly_docker/src/upload/ok1.png) | ![Add Form](pawly_docker/src/upload/ok3.png) | ![Find your soulmate pet](pawly_docker/src/upload/ok2.png) |
 
 
 ---
